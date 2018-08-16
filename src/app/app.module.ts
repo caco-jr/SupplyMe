@@ -6,10 +6,10 @@ import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { ROUTES } from './app.routes';
-import { FornecedorComponent } from './fornecedor/fornecedor.component';
+import { HomeComponent } from './fornecedor/home/home.component';
 
 @NgModule({
-  declarations: [AppComponent, FornecedorComponent],
+  declarations: [AppComponent, HomeComponent],
   imports: [
     BrowserModule,
     HttpClientModule,
