@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,500');
 
+// --- Variaveis
+$border-radius: 6px;
+
+// ---------------------------------------------------------
+
 * {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
@@ -15,6 +20,35 @@ body {
 }
 
 .c-produto.mat-card {
-  border-radius: 6px;
-  overflow: hidden;
+  border-radius: $border-radius;
+
+  img {
+    border-radius: $border-radius $border-radius 0 0;
+  }
 }
+
+// --- Buttons
+.c-button {
+  border: none;
+  background: #2ec4b6;
+  border-radius: $border-radius;
+  cursor: pointer;
+  transition: 0.3s all ease;
+  outline: none;
+  min-width: 140px;
+  margin: 15px auto 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  *,
+  & {
+    color: #fff;
+    font-size: 16px;
+  }
+
+  &:hover {
+    background: darken($color: #2ec4b6, $amount: 10);
+  }
+}
+// ---------------------------------------------------------

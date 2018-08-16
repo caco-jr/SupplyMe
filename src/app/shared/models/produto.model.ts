@@ -3,5 +3,7 @@ export interface Produto {
   brand_name: string;
   name: string;
   size: string;
+  author: string;
+  publisher: string;
   images: string[];
 }
