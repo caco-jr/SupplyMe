@@ -10,4 +10,17 @@
   .badge {
     font-weight: 400;
   }
+
+  .color {
+    margin-left: 20px;
+    font-size: 14px;
+  }
+
+  .c-button.remove {
+    background-color: #ee6e73;
+    &,
+    * {
+      color: #fff !important;
+    }
+  }
 }

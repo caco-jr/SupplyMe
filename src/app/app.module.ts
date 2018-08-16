@@ -13,6 +13,13 @@ import { HeaderComponent } from './shared/components/header/header.component';
 import { ProdutoComponent } from './shared/components/produto/produto.component';
 import { SecaoProdutosComponent } from './fornecedor/home/secao-produtos/secao-produtos.component';
 import { CadastroComponent } from './vendedor/cadastro/cadastro.component';
+import { AppService } from './app.service';
+import { CadastroEanComponent } from './fornecedor/cadastro-ean/cadastro-ean.component';
+import { FormAComponent } from './fornecedor/cadastro-ean/form-a/form-a.component';
+import { FormCComponent } from './fornecedor/cadastro-ean/form-c/form-c.component';
+import { CartComponent } from './shared/components/header/cart/cart.component';
+import { CartPageComponent } from './cart-page/cart-page.component';
+import { ProductPageComponent } from './product-page/product-page.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +28,13 @@ import { CadastroComponent } from './vendedor/cadastro/cadastro.component';
     HeaderComponent,
     ProdutoComponent,
     SecaoProdutosComponent,
-    CadastroComponent
+    CadastroComponent,
+    CadastroEanComponent,
+    FormAComponent,
+    FormCComponent,
+    CartComponent,
+    CartPageComponent,
+    ProductPageComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +43,7 @@ import { CadastroComponent } from './vendedor/cadastro/cadastro.component';
     ReactiveFormsModule,
     MatCardModule
   ],
-  providers: [],
+  providers: [AppService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

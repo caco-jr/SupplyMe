@@ -1,0 +1,50 @@
+<app-header></app-header>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-md-4">
+      <app-produto [produto]="produto"></app-produto>
+    </div>
+
+    <div class="col-12 col-md-8">
+      <mat-card class="eanCadastro boxProd">
+        <form [formGroup]="produtoForm" (ngSubmit)="onSubmit()" class="form">
+
+          <div class="ct-form-group">
+            <label class="text"> Quantidade </label>
+
+            <select (change)="aplicaDesconto($event)">
+              <option value="100">100 Unidades</option>
+              <option value="300"> 300 Unidades </option>
+              <option value="600"> 600 Unidades </option>
+            </select>
+          </div>
+
+          <div class="ct-form-group">
+            <label class="text"> Preço </label>
+
+            {{ precoValor }}
+          </div>
+
+          <div class="ct-form-group">
+            <label class="text"> Desconto </label>
+
+            {{ descontoValor }}%
+          </div>
+
+          <div class="ct-form-group">
+            <label class="text"> Frete </label>
+
+            {{ freteValor }}
+          </div>
+
+          <button class="c-button m-large default" type="submit" [disabled]="!produtoForm.valid">
+            <span class="text">
+              Salvar
+            </span>
+          </button>
+        </form>
+      </mat-card>
+    </div>
+  </div>
+</div>

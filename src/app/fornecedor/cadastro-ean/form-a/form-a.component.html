@@ -1,0 +1,15 @@
+<mat-card class="container eanPesquisa">
+  <form [formGroup]="eanPesquisa" (ngSubmit)="onSubmit()" class="form">
+    <div class="ct-form-group">
+      <label class="title"> Cadastre o seu EAN: </label>
+
+      <input type="text" formControlName="ean" class="form-control" />
+    </div>
+
+    <button class="c-button" type="submit">
+      <span class="text">
+        Ir
+      </span>
+    </button>
+  </form>
+</mat-card>

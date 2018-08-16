@@ -1,21 +1,20 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormGroup, FormBuilder } from '@angular/forms';
+
+import { AppService } from '../../../app.service';
 import { UserModel } from '@models/user.model';
-import { AppService } from '../../app.service';
-import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-cadastro',
-  templateUrl: './cadastro.component.html',
-  styleUrls: ['./cadastro.component.scss']
+  selector: 'app-form-c',
+  templateUrl: './form-c.component.html',
+  styleUrls: ['./form-c.component.scss']
 })
-export class CadastroComponent implements OnInit {
+export class FormCComponent implements OnInit {
   accountForm: FormGroup;
 
   constructor(
     private formBuilder: FormBuilder,
-    private appService: AppService,
-    private router: Router
+    private appService: AppService
   ) {
     this.accountForm = this.createFormGroupWithBuilder(this.formBuilder);
   }
@@ -38,9 +37,6 @@ export class CadastroComponent implements OnInit {
     console.log('====================================');
     console.log(result);
     console.log('====================================');
-
-    this.appService.setUser(result);
-    this.router.navigate(['/']);
   }
 
   ngOnInit() {}

@@ -5,8 +5,10 @@
     <div class="mascara"></div>
 
     <div class="container box">
-        <h1> Fornecedor </h1>
+        <h1> Cadastrar EAN </h1>
     </div>
 </div>
 
-<app-secao-produtos titulo="Produtos" [listaProdutos]="produtos"></app-secao-produtos>
+<app-form-a (eanFeedback)="receiverFeedback($event)"></app-form-a>
+
+<app-form-c *ngIf="isEAN"></app-form-c>

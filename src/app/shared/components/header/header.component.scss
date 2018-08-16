@@ -5,7 +5,32 @@
   position: relative;
   z-index: 9;
 
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+  }
+
   .title {
     color: #ee6e73;
+    margin: 0;
+  }
+
+  .box {
+    .nome {
+      margin-right: 20px;
+    }
+  }
+
+  nav {
+    a {
+      margin-right: 15px;
+      color: #565656;
+    }
+  }
+
+  a {
+    text-decoration: none;
   }
 }

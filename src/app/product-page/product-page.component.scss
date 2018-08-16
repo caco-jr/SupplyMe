@@ -1,0 +1,19 @@
+.ct-form-group {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 20px;
+
+  .text {
+    margin: 0 15px 0 0;
+    min-width: 100px;
+  }
+
+  .form-control {
+    width: 100px;
+    margin-right: 10px;
+  }
+}
+
+.boxProd {
+  margin-top: 40px;
+}

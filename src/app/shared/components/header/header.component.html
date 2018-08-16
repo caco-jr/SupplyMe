@@ -1,5 +1,26 @@
 <header class="c-header">
   <div class="container">
-    <h1 class="title"> SupplyMe </h1>
+    <a routerLink="/">
+      <h1 class="title"> SupplyMe </h1>
+    </a>
+
+    <nav>
+      <a routerLink="/f/cadastro-ean">
+        Enviar EAN
+      </a>
+      <a routerLink="/v/cadastro">
+        Cadastro
+      </a>
+    </nav>
+
+    <div class="box">
+      <span class="nome" *ngIf="nome">
+        Olá, <b> {{ nome }} </b>!
+      </span>
+
+      <a routerLink="/cart-page">
+        <app-cart></app-cart>
+      </a>
+    </div>
   </div>
 </header>

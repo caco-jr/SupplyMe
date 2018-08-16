@@ -1,0 +1,15 @@
+.ct-form-group {
+  display: inline-flex;
+  align-items: flex-end;
+  margin-bottom: 20px;
+
+  .text {
+    margin: 0 15px 0 0;
+    min-width: 100px;
+  }
+
+  .form-control {
+    flex: 1;
+    margin-right: 30px;
+  }
+}

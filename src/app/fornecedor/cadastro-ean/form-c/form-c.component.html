@@ -1,0 +1,45 @@
+<mat-card class="container eanCadastro">
+  <form [formGroup]="eanCadastro" (ngSubmit)="onSubmit()" class="form">
+    <div class="ct-form-group">
+      <label class="text"> Preço </label>
+
+      <input type="text" formControlName="preco" class="form-control" />
+    </div>
+
+    <div class="ct-form-group">
+      <label class="text"> Quantidade </label>
+
+      <input type="text" formControlName="quantidade" class="form-control" />
+    </div>
+
+    <div class="ct-form-group">
+      <span class="text"> A partir de </span>
+
+      <input type="text" formControlName="produtosInicial" class="form-control" />
+
+      <span class="text"> produtos, vai ofertar </span>
+
+      <input type="text" formControlName="oferta" class="form-control" />
+
+      <span class="text"> % </span>
+    </div>
+
+    <div class="ct-form-group">
+      <span class="text"> A partir de R$ </span>
+
+      <input type="text" formControlName="valorInicial" class="form-control" />
+
+      <span class="text"> vai oferecer desconto de </span>
+
+      <input type="text" formControlName="desconto" class="form-control" />
+
+      <span class="text"> % </span>
+    </div>
+
+    <button class="c-button m-large default" type="submit" [disabled]="!accountForm.valid">
+      <span class="text">
+        Salvar
+      </span>
+    </button>
+  </form>
+</mat-card>

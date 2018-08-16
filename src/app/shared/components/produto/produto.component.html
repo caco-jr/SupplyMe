@@ -1,5 +1,7 @@
 <mat-card class="c-produto">
-  <img [src]="imgURL" alt="" mat-card-image>
+  <a routerLink="/product-page" (click)="selectProduct(produto)">
+    <img [src]="imgURL" alt="" mat-card-image>
+  </a>
 
   <mat-card-title class="title">
     {{ name }}
@@ -7,10 +9,12 @@
 
   <div class="c-box-hidden">
     <span class="badge badge-pill badge-secondary"> {{ brandName }} </span>
-    <span> {{ color }} </span>
+    <span class="color"> {{ color }} </span>
 
     <div class="group-buttons">
-      <button class="c-button button"> Adicionar </button>
+      <button class="c-button button" (click)="appendProduct(produto)" *ngIf="!isFinish"> Adicionar </button>
+
+      <button class="c-button button remove" *ngIf="isFinish"> Remover </button>
     </div>
   </div>
 </mat-card>
