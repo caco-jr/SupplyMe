@@ -123,5 +123,10 @@
       }
     }
   },
-  "defaultProject": "SupplyMe"
+  "defaultProject": "SupplyMe",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  }
 }
