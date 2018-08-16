@@ -4,8 +4,8 @@
       <h2 class="title"> {{ titulo }} </h2>
     </div>
 
-    <div class="col-12 col-md-4" *ngFor="let produto of listaProdutos">
-      <app-produto [name]="produto.name" [imgURL]="produto.images[0]"></app-produto>
+    <div class="col-12 col-sm-4 col-md-3" *ngFor="let produto of listaProdutos">
+      <app-produto [produto]="produto"></app-produto>
     </div>
   </div>
 </div>
