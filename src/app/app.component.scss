@@ -2,7 +2,7 @@
 
 // --- Variaveis
 $border-radius: 6px;
-
+$color-primary: #ee6e73;
 // ---------------------------------------------------------
 
 * {
@@ -20,11 +20,15 @@ body {
 }
 
 .c-produto.mat-card {
-  border-radius: $border-radius;
-
   img {
     border-radius: $border-radius $border-radius 0 0;
   }
+}
+
+.mat-card,
+.form-control {
+  border-radius: $border-radius !important;
+  background-color: #fff;
 }
 
 // --- Buttons
@@ -49,6 +53,61 @@ body {
 
   &:hover {
     background: darken($color: #2ec4b6, $amount: 10);
+  }
+
+  &.m-large {
+    min-width: 200px;
+    min-height: 35px;
+  }
+}
+// ---------------------------------------------------------
+
+// --- Radio Button
+.ct-radio-button {
+  padding: 0 0 0 25px;
+  position: relative;
+  margin: 0 0 5px;
+  cursor: pointer;
+
+  input {
+    display: none;
+
+    &:checked ~ .text::before {
+      border-color: $color-primary;
+    }
+
+    &:checked ~ .text::after {
+      background-color: $color-primary;
+    }
+  }
+
+  .text {
+    cursor: pointer;
+
+    &::before,
+    &::after {
+      content: '';
+      margin: auto 0;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      border-radius: 100% !important;
+    }
+
+    &::before {
+      width: 14px;
+      height: 14px;
+      border: 1px solid #ccc;
+      left: 0;
+    }
+
+    &::after {
+      width: 8px;
+      height: 8px;
+      background-color: #fff;
+      left: 3px;
+      transition: 0.3s all ease;
+    }
   }
 }
 // ---------------------------------------------------------
